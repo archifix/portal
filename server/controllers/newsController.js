@@ -7,12 +7,12 @@ const { json, where } = require('sequelize')
 class NewsController {
   async create(req, res, next) {
     try {
-      const {name, typeId, descriptionId} = req.body
+      const {name, typeId} = req.body
     const {img} = req.files
     let fileName = uuid.v4() + ".jpg"
     img.mv(path.resolve(__dirname, '..', 'static', fileName))
 
-    const news = await News.create({name, typeId, descriptionId, img: fileName})
+    const news = await News.create({name, typeId, img: fileName})
 
     return res.json(news)
     }
@@ -22,19 +22,13 @@ class NewsController {
     
   }
   async getAll(req, res) {
-    const {typeId, descriptionId} = req.query
+    const {typeId} = req.query
     let news;
-    if(!typeId && !descriptionId) {
+    if(!typeId) {
       news = await News.findAll()
     }
-    if(typeId && !descriptionId) {
+    if(typeId) {
       news = await News.findAll(where[typeId])
-    }
-    if(!typeId && descriptionId) {
-      news = await News.findAll(where[descriptionId])
-    }
-    if(typeId && descriptionId) {
-      news = await News.findAll(where[typeId, descriptionId])
     }
     return res.json(news)
   }

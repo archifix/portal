@@ -9,7 +9,6 @@ const router = require('./routes/index')
 const errorHandler = require('./midldleware/ErrorHandlingMidleware')
 
 const PORT = process.env.PORT
-console.log(PORT)
 
 const app = express()
 app.use(cors())
@@ -23,7 +22,7 @@ const start = async () => {
     try {
     await sequelize.authenticate();
     await sequelize.sync()
-    app.listen(PORT, () => console.log('>Server OK on:${port}'))
+    app.listen(PORT, () => console.log(`Server OK on: ${PORT}`))
   } catch(e) {
     console.log(e)
   }
