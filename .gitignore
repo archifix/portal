@@ -9,7 +9,8 @@
 /coverage
 
 #package-lock
-package-lock.json
+./server/package-lock.json
+./client/package-lock.json
 
 # production
 /build
