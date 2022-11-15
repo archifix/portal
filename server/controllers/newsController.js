@@ -2,17 +2,16 @@ const uuid = require('uuid')
 const path = require('path')
 const {News} = require('../models/models')
 const ApiError = require('../error/ApiError')
-const { json, where } = require('sequelize')
 
 class NewsController {
   async create(req, res, next) {
     try {
-      const {name, content} = req.body
-    const {img} = req.files
-    let fileName = uuid.v4() + ".jpg"
-    img.mv(path.resolve(__dirname, '..', 'static', fileName))
+      const {name, contentId} = req.body
+      const {img} = req.files
+      let fileName = uuid.v4() + ".jpg"
+      img.mv(path.resolve(__dirname, '..', 'static', fileName))
 
-    const news = await News.create({name, content, img: fileName})
+    const news = await News.create({name, contentId, img: fileName})
 
     return res.json(news)
     }
@@ -28,7 +27,7 @@ class NewsController {
       news = await News.findAll()
     }
     if(newsId) {
-      news = await News.findAll(where[newsId])
+      news = await News.findAll({where:{newsId}})
     }
     return res.json(news)
   }
