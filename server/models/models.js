@@ -1,7 +1,7 @@
 const sequelize = require('../db')
 const {DataTypes} = require('sequelize')
 
-const Users = sequelize.define('users', {
+const User = sequelize.define('user', {
   id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
   fullName: {type: DataTypes.STRING, require: false, allowNull: false},
   email: {type: DataTypes.STRING, unique: true, allowNull: false},
@@ -27,12 +27,12 @@ const Content = sequelize.define('content', {
 })
 
 
-Users.hasMany(News)
-News.belongsTo(Users)
+User.hasMany(News)
+News.belongsTo(User)
 
 Content.hasMany(News)
 News.belongsTo(Content)
 
 module.exports = {
-  Users, News, Content
+  User, News, Content
 }

@@ -1,7 +1,7 @@
 require('dotenv').config('./.env')
 const express = require('express')
 const sequelize = require('./db.js')
-const modele = require('./models/models')
+const models = require('./models/models')
 const cors = require('cors')
 const fileUpload = require('express-fileupload')
 const path = require('path')
