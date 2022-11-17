@@ -3,15 +3,15 @@ const {DataTypes} = require('sequelize')
 
 const User = sequelize.define('user', {
   id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
-  fullName: {type: DataTypes.STRING, require: false, allowNull: false},
+  // fullName: {type: DataTypes.STRING, require: false, allowNull: false},
   email: {type: DataTypes.STRING, unique: true, allowNull: false},
   password: {type: DataTypes.STRING, allowNull: false},
-  official: {type: DataTypes.INTEGER, require: false, unique: true},
-  mobile: {type: DataTypes.INTEGER, require: false, unique: true},
-  city: {type: DataTypes.STRING, require: false, unique: true, allowNull: false},
-  street: {type: DataTypes.STRING, require: false, allowNull: false},
-  home: {type: DataTypes.INTEGER, require: false, allowNull: false},
-  flat: {type: DataTypes.INTEGER, require: false, allowNull: false},
+  // official: {type: DataTypes.INTEGER, require: false, unique: true},
+  // mobile: {type: DataTypes.INTEGER, require: false, unique: true},
+  // city: {type: DataTypes.STRING, require: false, unique: true, allowNull: false},
+  // street: {type: DataTypes.STRING, require: false, allowNull: false},
+  // home: {type: DataTypes.INTEGER, require: false, allowNull: false},
+  // flat: {type: DataTypes.INTEGER, require: false, allowNull: false},
   role: {type: DataTypes.STRING, defaultValue: "USER"}  
 })
 
