@@ -1,10 +1,9 @@
 import React from "react"
 //import { useLocation } from "react-router-dom";
 import logo from "../../assets/images/yuo.png"
-import Auth from "../../pages/Auth/Auth";
-import Button from "../../ui/button/Button";
-import Navigation from "./Navigation";
-
+import Auth from "../../pages/Auth/Auth"
+import Button from "../../ui/button/Button"
+import Navigation from "./Navigation"
 
 const PageHeader: React.FC = () => {
   return (
@@ -27,49 +26,46 @@ const PageHeader: React.FC = () => {
           </div>
         </div>
       </header>
-      <main id="topBar" className="flex items-center justify-between mx-10">
+      <main
+        id="topBar"
+        className="flex items-center justify-between mx-10 max-h-max"
+      >
         <nav className="flex items-center h-4 mr-8">
           <a href="/">
-          <Button>Главная</Button>
+            <Button>Главная</Button>
           </a>
           <a href="/">
-          <Button>Тех.поддержка</Button>
+            <Button>Тех.поддержка</Button>
           </a>
           <a href="/">
-          <Button>СЭД</Button>
+            <Button>СЭД</Button>
           </a>
           <a href="/">
-          <Button>Почта</Button>
+            <Button>Почта</Button>
           </a>
           <a href="/">
-          <Button>Справочные системы</Button>
+            <Button>Справочные системы</Button>
+          </a>
+
+          <a href="/">
+            <Button>Справочные материалы</Button>
           </a>
           <a href="/">
-          <Button>Шаблоны форм статической отчетности</Button>
+            <Button>Образцы документов</Button>
           </a>
           <a href="/">
-          <Button>Справочные материалы</Button>
+            <Button>Центр ИТ ЮО</Button>
           </a>
           <a href="/">
-          <Button>Образцы документов</Button>
+            <Button>Военный совет ЮО</Button>
           </a>
-          <a href="/">
-          <Button>Центр ИТ ЮО</Button>
-          </a>
-          <a href="/">
-          <Button>Военный совет ЮО</Button>
-          </a>
-                    
         </nav>
         <nav className="flex items-end justify-end">
           <a href="/authorization">
             <Button>Вход</Button>
           </a>
         </nav>
-        
-        
-        
-        
+
         {/* <Menu menuButton={<MenuButton>Open menu</MenuButton>}>
         <MenuItem>New File</MenuItem>
         <SubMenu label="Open">

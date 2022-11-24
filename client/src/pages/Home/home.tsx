@@ -3,20 +3,20 @@ import PageLayout from "../../components/Layout/Layout"
 import photo from "../../assets/images/Zolotov_VV_Utverzhdennaya_3.jpg"
 import PageAccord from "./accordion"
 import News from "../News/News"
+import Button from "../../ui/button/Button"
+import { Link } from "react-router-dom"
 //import CalendarGfg from "../Calendar/calendar"
 
 function Home() {
   return (
     <PageLayout>
       <div className="relative ml-5 mr-5">
-        <div className="left pt-7 ">
-          <h4 className="uppercase ">Главная задача</h4>
-          <hr className="border-1.5 border-slate-300 mt-[10px]" />
-        </div>
-        
-
         <div className="flex flex-row flex-wrap md:flex-nowrap lg:flex-nowrap gap-[30px] mt-[20px]">
           <div className="w-full md:w-3/4 lg:w-3/4 xl:w-3/4 2xl:w-3/4 3xl:w-3/4">
+            <div className="left pt-7 ">
+              <h4 className="uppercase font-medium text-xl ">Главная задача</h4>
+              <hr className="border-1.5 border-slate-300 mt-[10px] pb-5" />
+            </div>
             <div className="flex flex-row flex-wrap md:flex-nowrap lg:flex-nowrap gap-[30px]">
               <div className="text-justify px-[15px] md:px-0 lg:px-0 w-full md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2 3xl:w-1/2">
                 <header>
@@ -27,7 +27,12 @@ function Home() {
                   </h4>
                 </header>
                 <p>
-                  <img className="float-left pr-1" src={photo} width="157" alt="" />
+                  <img
+                    className="float-left pr-1"
+                    src={photo}
+                    width="157"
+                    alt=""
+                  />
                 </p>
                 <ol className="post_item-title">
                   <li>
@@ -151,7 +156,22 @@ function Home() {
           <div className="px-[15px] md:px-0 lg:px-0 w-full md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 3xl:w-1/4">
             {/* <Calendar /> */}
             {/* <PageAccord /> */}
-            <News />
+            <div className="block mx-2 max-h-10">
+              <a className="hover:text-red-800" href="/news">
+                <h1 className="flex justify-center font-bold uppercase pb-6">
+                  Новости
+                </h1>
+              </a>
+              <News />
+              <div className="flex justify-center pt-5 text-base">
+                <Link href="/">
+                  <Button>Шаблоны форм статической отчетности</Button>
+                </Link>
+                <a href="/">
+                  <Button>Шаблоны форм статической отчетности</Button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
