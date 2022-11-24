@@ -9,8 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@szhsin/react-menu": "^3.3.0",
+    "axios": "^1.2.0",
+    "mobx": "^6.7.0",
+    "mobx-react-lite": "^3.4.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "sass": "^1.56.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
