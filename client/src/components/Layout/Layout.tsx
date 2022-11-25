@@ -4,9 +4,9 @@ import PageFooter from "./Footer";
 
 const PageLayout:FC<PropsWithChildren> = ({ children }) => {
   return (
-    <div id="wrapper">
+    <div id="wrapper font-roboto">
       <PageHeader />
-        <div className="3xl:container mx-10">{children}</div>
+        <div className="3xs:container mx-10">{children}</div>
       <PageFooter />
     </div>
   );

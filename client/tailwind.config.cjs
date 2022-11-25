@@ -5,11 +5,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
     ],
   theme: {
+    container: {
+      "3xs": "1780px",
+      center: true,
+    },
     extend: {
-      container: {
-        "3xl": "1780px",
-        center: true,
-      },
+      
     },
   },
   plugins: [],

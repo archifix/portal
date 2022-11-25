@@ -7,15 +7,15 @@ import { Link } from "react-router-dom"
 
 const Tasks: FC = () => {
   return (
-    <div className="relative ml-5 mr-5">
-      <div className="flex flex-row flex-wrap md:flex-nowrap lg:flex-nowrap gap-[30px] mt-[20px]">
-        <div className="w-full md:w-3/4 lg:w-3/4 xl:w-3/4 2xl:w-3/4 3xl:w-3/4">
-          <div className="left pt-7 ">
-            <h4 className="uppercase font-medium text-xl ">Главная задача</h4>
-            <hr className="border-1.5 border-slate-300 mt-[10px] pb-5" />
-          </div>
-          <div className="flex flex-row flex-wrap md:flex-nowrap lg:flex-nowrap gap-[30px]">
-            <div className="static text-justify px-[15px] md:px-0 lg:px-0 w-full md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2 3xl:w-1/2">
+    <div className="basis-1/2 grid h-max max-w-4xl font-roboto gap-5">
+      <div className="grid">
+        <div className="">
+          <h4 className="uppercase font-medium text-xl ">Главная задача</h4>
+          <hr className="border-1.5 border-red-800 mt-[10px] pb-5" />
+        </div>
+      
+        <div className="grid gap-5 grid-cols-1">
+            <div className="text-justify">
               <header>
                 <h4 className="text-justify text-[15px] font-roboto text-custom-dark uppercase font-bold mb-4">
                   Главные направления(задачи) войск национальной гвардии
@@ -25,7 +25,7 @@ const Tasks: FC = () => {
               </header>
               <p>
                 <img
-                  className="float-left pr-1"
+                  className="float-left pr-3"
                   src={photo}
                   width="157"
                   alt=""
@@ -90,8 +90,7 @@ const Tasks: FC = () => {
                   и технологий в Российской Федерации.
                 </li>
               </ol>
-            </div>
-            <div className="inline-block text-justify px-[15px] md:px-0 lg:px-0 w-full md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2 3xl:w-1/2">
+            {/* </div> <div className="inline-block text-justify">
               <header>
                 <h4 className="text-justify text-[15px] font-roboto text-custom-dark uppercase font-bold mb-4">
                   Задачи войск национальной гвардии
@@ -145,11 +144,18 @@ const Tasks: FC = () => {
                   лиц.
                 </li>
               </ol>
-            </div>
+            </div> */}
+           
           </div>
-        </div>
       </div>
     </div>
+    </div>
+
+
+
+ 
+       
+
   )
 }
 
