@@ -6,6 +6,7 @@ import News from "../News/News"
 import Button from "../../ui/button/Button"
 import { Link } from "react-router-dom"
 import Tasks from "../Tasks/Tasks"
+import Task from "../Tasks/task"
 
 // import "./home.scss"
 //import CalendarGfg from "../Calendar/calendar"
@@ -17,13 +18,14 @@ function Home() {
         <div className="grid basis-10/12 gap-8 grid-cols-2 w-max pr-8">
           <Tasks />
           <div className="text-center font-roboto">
-            <a className="uppercase text-xl" href="/news">Новости</a>
+            <br />
             <hr className="border-1.5 border-red-800 mt-[10px] pb-5" />
-          <News />
+          <Task />
           </div>
         </div>
         <div className="flex justify-center basis-1/4 w-max">
         <div className="pt-5 text-base text-center">
+          <PageAccord/>
                 <Link to="/">
                   <Button>Шаблоны форм статической отчетности</Button>
                 </Link>

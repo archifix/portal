@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 //import { useLocation } from "react-router-dom";
 import logo from "../../assets/images/yuo.png"
 import Auth from "../../pages/Auth/Auth"
@@ -10,7 +11,7 @@ const PageHeader: React.FC = () => {
     <>
       <header className="bg-fixed top-0 z-30 w-full shadow-sm">
         <div className="flex items-center max-w-full mx-10">
-          <a href="/">
+          <Link to="/">
             <img
               src={logo}
               height="96"
@@ -19,7 +20,7 @@ const PageHeader: React.FC = () => {
               alt="Logo"
             />
             <span className="logo"></span>
-          </a>
+          </Link>
           <div className="title font-bold">
             <h1>Южный округ</h1>
             <h3>войск национальной гвардии Российской Федерации</h3>
@@ -31,39 +32,39 @@ const PageHeader: React.FC = () => {
         className="flex items-center justify-between mx-10 max-h-max"
       >
         <nav className="flex items-center h-4 mr-8">
-          <a href="/">
+          <Link to="/">
             <Button>Главная</Button>
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/">
             <Button>Тех.поддержка</Button>
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/">
             <Button>СЭД</Button>
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/">
             <Button>Почта</Button>
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/">
             <Button>Справочные системы</Button>
-          </a>
+          </Link>
 
-          <a href="/">
+          <Link to="/">
             <Button>Справочные материалы</Button>
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/">
             <Button>Образцы документов</Button>
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/">
             <Button>Центр ИТ ЮО</Button>
-          </a>
-          <a href="/">
+          </Link>
+          <Link to="/">
             <Button>Военный совет ЮО</Button>
-          </a>
+          </Link>
         </nav>
         <nav className="flex items-end justify-end">
-          <a href="/authorization">
+          <Link to="/login">
             <Button>Вход</Button>
-          </a>
+          </Link>
         </nav>
 
         {/* <Menu menuButton={<MenuButton>Open menu</MenuButton>}>
