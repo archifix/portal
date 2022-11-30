@@ -1,8 +1,7 @@
 import React from "react"
 import PageLayout from "../../components/Layout/Layout"
-import photo from "../../assets/images/Zolotov_VV_Utverzhdennaya_3.jpg"
-import PageAccord from "./accordion"
-import News from "../News/News"
+// import photo from "../../assets/images/Zolotov_VV_Utverzhdennaya_3.jpg"
+// import News from "../News/News"
 import Button from "../../ui/button/Button"
 import { Link } from "react-router-dom"
 import Tasks from "../Tasks/Tasks"
@@ -11,7 +10,7 @@ import Task from "../Tasks/task"
 // import "./home.scss"
 //import CalendarGfg from "../Calendar/calendar"
 
-function Home() {
+export const Home = () => {
   return (
     <PageLayout>
       <div className="relative flex justify-center pt-7">
@@ -25,7 +24,6 @@ function Home() {
         </div>
         <div className="flex justify-center basis-1/4 w-max">
         <div className="pt-5 text-base text-center">
-          <PageAccord/>
                 <Link to="/">
                   <Button>Шаблоны форм статической отчетности</Button>
                 </Link>
@@ -65,4 +63,3 @@ function Home() {
   )
 }
 
-export default Home
