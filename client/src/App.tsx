@@ -1,6 +1,6 @@
 import React from "react"
 import { Routes } from "react-router-dom"
-import "./assets/styles/App.scss"
+import "./ui/assets/styles/App.scss"
 import AppRouter from "./components/router"
 
 const App: React.FC = () => {

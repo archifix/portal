@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import photo from "../../assets/images/Zolotov_VV_Utverzhdennaya_3.jpg"
+import photo from "../../ui/assets/images/Zolotov_VV_Utverzhdennaya_3.jpg"
 // import PageAccord from "./accordion"
 import News from "../News/News"
 // import Button from "../../ui/button/Button"

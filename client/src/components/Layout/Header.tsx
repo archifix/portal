@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 //import { useLocation } from "react-router-dom";
-import logo from "../../assets/images/yuo.png"
+import logo from "../../ui/assets/images/yuo.png"
 import Auth from "../../pages/Auth/Auth"
 import Button from "../../ui/button/Button"
 import Navigation from "./Navigation"

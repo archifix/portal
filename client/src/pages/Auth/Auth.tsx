@@ -1,6 +1,6 @@
 import React from 'react'
 import PageLayout from '../../components/Layout/Layout'
-import '../../assets/styles/Auth.scss'
+import '../../ui/assets/styles/Auth.scss'
 
 const Auth = () => {
   return (

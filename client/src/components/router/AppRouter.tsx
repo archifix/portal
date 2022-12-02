@@ -1,5 +1,6 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom"
+import Acordion from "../../pages/Acordion"
 import Admin from "../../pages/Admin/Admin"
 import Auth from "../../pages/Auth/Auth"
 import Home from "../../pages/Home"
@@ -15,6 +16,7 @@ export const AppRouter = () => {
     <Route path={REGISTRATION_ROUTE} element={<Auth />}/>
     <Route path={NEWS_ROUTE} element={<News />}/>
     <Route path={NEWS_CREATE_ROUTE} element={<News />}/>
+    <Route path="accordion" element={<Acordion/>}/>
    </Routes>
   )
 }
