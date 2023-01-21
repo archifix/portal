@@ -4,7 +4,11 @@ import PageLayout from "../../components/Layout/Layout"
 const News = () => {
   return (
     <div className="">
+<<<<<<< HEAD
+      <h4 className="text-justify text-sm">
+=======
       <h4 className="text-justify">
+>>>>>>> 0e5a80557de103005bea356e3a8e77cb9fbea83f
         МОСКВА, 24 ноября. /ТАСС/. Министерство культуры РФ отказало
         кинокомпании «Лунапарк» в выдаче прокатного удостоверения на сериал
         «Монастырь». Об этом сообщили журналистам в пресс-службе ведомства в

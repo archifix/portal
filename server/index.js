@@ -1,31 +1,26 @@
-require('dotenv').config('./.env')
+require('dotenv').config()
 const express = require('express')
-const sequelize = require('./db.js')
-const models = require('./models/models')
 const cors = require('cors')
-const fileUpload = require('express-fileupload')
-const path = require('path')
-const router = require('./routes/index')
-const errorHandler = require('./midldleware/ErrorHandlingMidleware')
+const cookieParser = require('cookie-parser')
+const sequelize = require('./db.js')
+const router = require('./routes/userRouter')
 
 const PORT = process.env.PORT
-
 const app = express()
-app.use(cors())
+
 app.use(express.json())
-app.use(express.static(path.resolve(__dirname, 'static')))
-app.use(fileUpload({}))
+app.use(cookieParser())
+app.use(cors())
 app.use('/api', router)
-app.use(errorHandler)
 
 const start = async () => {
-    try {
+  try {
     await sequelize.authenticate();
     await sequelize.sync()
-    app.listen(PORT, () => console.log(`Server OK on: ${PORT}`))
-  } catch(e) {
+    app.listen(PORT, () => console.log(`Server started on ${PORT}`))
+  } catch (e) {
     console.log(e)
   }
 }
 
-start()
+start ()

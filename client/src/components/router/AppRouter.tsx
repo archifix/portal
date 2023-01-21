@@ -1,4 +1,25 @@
 import React from "react"
+<<<<<<< HEAD
+import { Route, RouterProvider, Routes } from "react-router-dom"
+import { authRoutes, publicRoutes } from "./routes"
+
+const AppRouter = () => {
+  const isAuth = false
+  return (
+    <Routes>
+      {isAuth &&
+        authRoutes.map(({ path, Component }) => (
+          <Route key={path} path={path} component={Component} exact />
+        ))}
+      {publicRoutes.map(({ path, Component }) => (
+        <Route key={path} path={path} component={Component} exact />
+      ))}
+    </Routes>
+  )
+}
+
+export default AppRouter
+=======
 import { Route, Routes } from "react-router-dom"
 import Acordion from "../../pages/Acordion"
 import Admin from "../../pages/Admin/Admin"
@@ -22,3 +43,4 @@ export const AppRouter = () => {
 }
 
 
+>>>>>>> 0e5a80557de103005bea356e3a8e77cb9fbea83f
